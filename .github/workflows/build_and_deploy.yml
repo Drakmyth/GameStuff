@@ -32,7 +32,7 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: Deploy to https://gamestuff.drakmyth.com
+      - name: Deploy
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
           protocol: ftps
@@ -41,5 +41,5 @@ jobs:
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./build/
-          server-dir: ./public_html/gamestuff
+          server-dir: ./public_html/gamestuff/
           log-level: verbose
