@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - master
+      - feature/setup-and-automation
 
 jobs:
   build-and-deploy:
