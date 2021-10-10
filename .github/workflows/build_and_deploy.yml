@@ -40,5 +40,5 @@ jobs:
           REMOTE_USER: ${{ secrets.SFTP_USERNAME }}
           SSH_PRIVATE_KEY: ${{ secrets.SFTP_PRIVATE_KEY }}
           ARGS: -avz --delete
-          SOURCE: ./build/
-          TARGET: /public_html/gamestuff/
+          SOURCE: build/
+          TARGET: public_html/gamestuff/
