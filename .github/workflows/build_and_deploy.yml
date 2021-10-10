@@ -36,7 +36,7 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@4.1.0
         with:
           protocol: ftps
-          server: ftpes://drakmyth.com
+          server: ftpes://192.232.216.165
           port: 21
           username: drakmyth
           password: ${{ secrets.FTP_PASSWORD }}
