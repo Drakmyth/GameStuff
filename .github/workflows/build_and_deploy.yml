@@ -33,13 +33,12 @@ jobs:
         run: npm run build
 
       - name: Deploy
-        uses: SamKirkland/FTP-Deploy-Action@4.1.0
-        with:
-          protocol: ftps
-          server: ftpes://192.232.216.165
-          port: 21
-          username: drakmyth
-          password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./build/
-          server-dir: /public_html/gamestuff/
-          log-level: verbose
+        uses: easingthemes/ssh-deploy@v2.2.11
+        env:
+          REMOTE_HOST: ${{ secrets.SFTP_SERVER }}
+          REMOTE_PORT: ${{ secrets.SFTP_PORT }}
+          REMOTE_USER: ${{ secrets.SFTP_USERNAME }}
+          SSH_PRIVATE_KEY: ${{ secrets.SFTP_PRIVATE_KEY }}
+          ARGS: -avz --delete
+          SOURCE: ./build/
+          TARGET: /public_html/gamestuff/
