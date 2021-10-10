@@ -39,6 +39,6 @@ jobs:
           REMOTE_PORT: ${{ secrets.SFTP_PORT }}
           REMOTE_USER: ${{ secrets.SFTP_USERNAME }}
           SSH_PRIVATE_KEY: ${{ secrets.SFTP_PRIVATE_KEY }}
-          ARGS: -avz --delete --filter 'P .well-known/' --filter 'P .htaccess' --filter 'P cgi-bin/'
+          ARGS: -avz --delete --filter 'P .well-known/' --filter 'P .htaccess'
           SOURCE: build/
           TARGET: public_html/gamestuff/
