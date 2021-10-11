@@ -1,0 +1,9 @@
+ul.game-selector {
+    list-style: none;
+    padding: 0px;
+    width: 60px;
+}
+
+ul.game-selector>li {
+    margin: 10px 0px;
+}
